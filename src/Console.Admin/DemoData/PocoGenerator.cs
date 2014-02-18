@@ -59,7 +59,12 @@ namespace Console.Admin.DemoData
         public static List<User> CreateAdministrators(UserRepository userRepository)
         {
             var users = new List<User>();
-            
+
+            var erwin = new User("erwin@mtg-gamer.com", "Erwin", new CultureInfo("en-GB"), userRepository, new ApplicationSettings());
+            erwin.Roles.Add(Role.Administrator);
+            userRepository.Create(erwin, "secret");
+            users.Add(erwin);
+
             var robin = new User("robin@webpirates.nl", "Robin van der Knaap", new CultureInfo("nl-NL"), userRepository, new ApplicationSettings());
             robin.Roles.Add(Role.Administrator);
             userRepository.Create(robin, "secret");
