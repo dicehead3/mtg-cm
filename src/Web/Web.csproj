@@ -180,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="app\app.js" />
+    <Content Include="app\libraries\core\angular.js" />
+    <Content Include="app\libraries\core\jquery.js" />
     <Content Include="Global.asax" />
     <Content Include="Public\Css\BootstrapSwitch\bootstrap-switch.css" />
     <Content Include="Public\Css\Bootstrap\bootstrap.min.css" />
@@ -292,6 +295,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\User\Partials\UserList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\controllers\" />
+    <Folder Include="app\css\" />
+    <Folder Include="app\directives\" />
+    <Folder Include="app\images\" />
+    <Folder Include="app\libraries\custom\" />
+    <Folder Include="app\models\" />
+    <Folder Include="app\services\" />
+    <Folder Include="app\states\" />
+    <Folder Include="app\views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
