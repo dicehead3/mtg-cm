@@ -63,7 +63,9 @@
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="BaseRepository.cs" />
+    <Compile Include="CardRepository.cs" />
     <Compile Include="LogRepository.cs" />
+    <Compile Include="Mappings\CardMap.cs" />
     <Compile Include="Mappings\TranslationMap.cs" />
     <Compile Include="Mappings\UserMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +99,7 @@
   <ItemGroup>
     <EmbeddedResource Include="CustomSql\2_LogTable.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

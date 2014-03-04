@@ -32,12 +32,12 @@ namespace Data.Utils
 			Configuration = new Configuration();
 			Configuration.SetProperty(NHibernate.Cfg.Environment.ConnectionString, applicationSettings.ConnectionString);
 			Configuration.Configure();
-			
-			SessionFactory = Fluently.Configure(Configuration)
-				.Mappings(m =>
-				  m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
+
+            SessionFactory = Fluently.Configure(Configuration)
+                .Mappings(m =>
+                  m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
                 //.Mappings(m=>m.FluentMappings.ExportTo("c:\\temp"))
-				.BuildSessionFactory();
+                .BuildSessionFactory();
 		}
 
 		/// <summary>

@@ -57,6 +57,9 @@
     <Reference Include="RazorMailMessage">
       <HintPath>..\..\packages\RazorMailMessage.0.1\lib\net40\RazorMailMessage.dll</HintPath>
     </Reference>
+    <Reference Include="Skaele.Domain">
+      <HintPath>..\Data\bin\Debug\Skaele.Domain.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -151,6 +154,7 @@
   <ItemGroup>
     <EmbeddedResource Include="TemplateMailMessages\Images\blocks.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
