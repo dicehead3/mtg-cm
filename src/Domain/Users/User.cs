@@ -6,6 +6,7 @@ using System.Security.Principal;
 using Domain.AbstractRepository;
 using Infrastructure.ApplicationSettings;
 using Infrastructure.DomainBase;
+using Skaele.Domain.Cards;
 
 namespace Domain.Users
 {
@@ -21,6 +22,7 @@ namespace Domain.Users
         private string _displayName;
         private readonly ICollection<Role> _roles = new HashSet<Role>();
         private IIdentity _identity;
+        private readonly IEnumerable<Card> _cards; 
        
         // We need a user repository to make sure the email is unique
         // We need application settings to determine if culture is valid
@@ -29,6 +31,8 @@ namespace Domain.Users
             SetCulture(culture, applicationSettings);
             SetEmail(email, userRepository);
             DisplayName = displayName;
+
+            _cards = new List<Card>();
             
             // Users are active by default
             IsActive = true;
@@ -54,6 +58,11 @@ namespace Domain.Users
             { 
                 _displayName = value.Required("Display name is required");
             }
+        }
+
+        public virtual IEnumerable<Card> Cards
+        {
+            get { return _cards; }
         }
 
         public virtual CultureInfo Culture

@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="Integration\Data\UserRepositoryTests.cs" />
     <Compile Include="Integration\Infrastructure\Loggers\LogRepositoryTests.cs" />
+    <Compile Include="Unit\Domain\CardTests.cs" />
     <Compile Include="Unit\Domain\UserTests.cs" />
     <Compile Include="Unit\Infrastructure\Cache\InMemoryKeyValueCacheTests.cs" />
     <Compile Include="Unit\Infrastructure\Encryption\DefaultEncryptorTests.cs" />

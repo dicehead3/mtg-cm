@@ -1,136 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using Infrastructure.DomainBase;
 
 namespace Skaele.Domain.Cards
 {
     public class Card : Entity
     {
-        private int _setNumber;
-        private string _name;
-        private string _searchName;
-        private string _description;
-        private string _flavor;
-        private IEnumerable<string> _colors;
-        private string _manacost;
-        private string _convertedManaCost;
-        private string _cardSetName;
-        private int _power;
-        private string _type;
-        private string _subType;
-        private int _toughness;
-        private int _loyalty;
-        private string _rarity;
-        private string _artist;
-        private string _cardSetId;
-        private IEnumerable<Ruling> _rulings;
-        private IEnumerable<string> _formats;
-        private DateTime _releasedAt;
+        public Card()
+        {
+        }
 
-        protected Card()
+        /*protected Card()
         {
             
-        }
+        }*/
 
-        public virtual int SetNumber
-        {
-            get { return _setNumber; }
+        [DataMember(Name = "id")]
+        public virtual int MultiverseId { get; internal set; }
 
-        }
+        public virtual int SetNumber { get; internal set; }
 
-        public virtual string Name
-        {
-            get { return _name; }
-        }
+        public virtual string Name { get; internal set; }
 
-        public virtual string SearchName
-        {
-            get { return _searchName; }
-        }
+        public virtual string SearchName { get; internal set; }
 
-        public virtual string Description
-        {
-            get { return _description; }
-        }
+        public virtual string Description { get; internal set; }
 
-        public virtual string Flavor
-        {
-            get { return _flavor; }
-        }
+        public virtual string Flavor { get; internal set; }
 
-        public virtual IEnumerable<string> Colors
-        {
-            get { return _colors; }
-        }
+        public virtual IEnumerable<string> Colors { get; internal set; }
 
-        public virtual string Manacost
-        {
-            get { return _manacost; }
-        }
+        public virtual string Manacost { get; internal set; }
 
-        public virtual string ConvertedManaCost
-        {
-            get { return _convertedManaCost; }
-        }
+        public virtual string ConvertedManaCost { get; internal set; }
 
-        public virtual string CardSetName
-        {
-            get { return _cardSetName; }
-        }
+        public virtual string CardSetName { get; internal set; }
 
-        public virtual string Type
-        {
-            get { return _type; }
-        }
+        public virtual string Type { get; internal set; }
 
-        public virtual string SubType
-        {
-            get { return _subType; }
-        }
+        public virtual string SubType { get; internal set; }
 
-        public virtual int Power
-        {
-            get { return _power; }
-        }
+        public virtual int Power { get; internal set; }
 
-        public virtual int Toughness
-        {
-            get { return _toughness; }
-        }
+        public virtual int Toughness { get; internal set; }
 
-        public virtual int Loyalty
-        {
-            get { return _loyalty; }
-        }
+        public virtual int Loyalty { get; internal set; }
 
-        public virtual string Rarity
-        {
-            get { return _rarity; }
-        }
+        public virtual string Rarity { get; internal set; }
 
-        public virtual string Artist
-        {
-            get { return _artist; }
-        }
+        public virtual string Artist { get; internal set; }
 
-        public virtual string CardSetId
-        {
-            get { return _cardSetId; }
-        }
+        public virtual string CardSetId { get; internal set; }
 
-        public virtual IEnumerable<Ruling> Rulings
-        {
-            get { return _rulings; }
-        }
+        public virtual IEnumerable<Ruling> Rulings { get; internal set; }
 
-        public virtual IEnumerable<string> Formats
-        {
-            get { return _formats; }
-        }
+        public virtual IEnumerable<string> Formats { get; internal set; }
 
-        public virtual DateTime ReleasedAt
-        {
-            get { return _releasedAt; }
-        }
+        public virtual DateTime ReleasedAt { get; internal set; }
     }
 }

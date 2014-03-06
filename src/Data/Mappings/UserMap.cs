@@ -1,5 +1,6 @@
 ﻿using Domain.Users;
 using FluentNHibernate.Mapping;
+using Skaele.Domain.Cards;
 
 namespace Data.Mappings
 {
@@ -29,6 +30,13 @@ namespace Data.Mappings
                .AsSet()
                .Access.CamelCaseField(Prefix.Underscore)
                .Not.LazyLoad();
+
+            HasMany(x => x.Cards)
+                .Table("Cards")
+                .Element("Id")
+                .AsSet()
+                .Access.CamelCaseField(Prefix.Underscore)
+                .Not.LazyLoad();
 
             Map(x => x.Modified)
                 .Not.Nullable();
